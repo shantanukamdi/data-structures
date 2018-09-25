@@ -73,5 +73,15 @@ public class LinkedList {
 			n1 = null;
 		}
 	}
+	
+	public int getLength() {
+		Node n = head;
+		int count = 0;
+		while(n!= null) {
+			count++;
+			n = n.next;
+		}
+		return count;
+	}
 
 }
