@@ -13,11 +13,24 @@ public class GetNthNodeFromEnd {
 		list.insertAtStart(1);
 
 		list.printList();
+		getNthNodeFromEnd(list.head, 2);
 
 	}
-	
-	public static int getNthNodeFromEnd(Node head) {
-		
+
+	public static int getNthNodeFromEnd(Node head, int pos) {
+		int len = 0;
+		Node n = head;
+		while (n != null) {
+			len++;
+			n = n.next;
+		}
+
+		n = head;
+		for (int i = 1; i < len - pos + 1; i++) {
+			n = n.next;
+		}
+
+		System.out.println("Position " + pos + " from end of the list is "+n.data);
 		return 0;
 	}
 }
